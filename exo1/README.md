@@ -7,3 +7,9 @@ On considère une suite de Fibonacci dont l’élément le plus grand est strict
 ## Ce qui est attendu
 Trouver la somme de tous les éléments pairs de cette suite.
 Vous devrez faire une PR (Pull request) avec du code executable, écrit dans le langage de votre choix, le plus propre possible.
+
+## Rendu
+Mini App React
+pour lancer
+cd ./fibonacci
+npm run start
