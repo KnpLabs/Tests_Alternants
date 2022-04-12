@@ -28,9 +28,7 @@ class DrinkExpense
     }
 
 
-    /**
-     * @return array<string, User> $participants
-     */
+   
     public function getParticipants(): array
     {
         return $this->participants;
@@ -55,8 +53,23 @@ class DrinkExpense
     {
         return $this->le_payeur;
     }
+    function getUnitaryShared(): float
+    {
+        return $this->amount / count($this->participants);
+    }
+   
+    //fonction pour récuperer le montant payé par le payeur
+    function getUserShare(User $user): float
+    {
+        $montant = 0;
+     if($user == $this->le_payeur){
+         $montant = $this->amount;
+     }
+        return $montant;
+    }
 
-    function get_type() {
-        return 'DRINK';
+
+    function getType() {
+        return 'TYPE_DRINK';
     }
 }

@@ -26,7 +26,7 @@ class FoodExpense
         $this->le_payeur = $le_payeur;
         $this->participants = $participants;
     }
-
+  
     public function getAmount(): float
     {
         return $this->amount;
@@ -47,15 +47,27 @@ class FoodExpense
         return $this->le_payeur;
     }
 
-    /**
-     * @return array<string, User> $participants
-     */
+
     public function getParticipants(): array
     {
         return $this->participants;
     }
+   function getUnitaryShared(): float
+    {
+        return $this->amount / count($this->participants);
+    }
+    function getUserShare(User $user): float
+    {
+        $montant = 0;
+     if($user == $this->le_payeur){
+         $montant = $this->amount;
+     }
+        return $montant;
+    }
 
-    function get_type() {
-        return 'FOOD';
+
+
+    function getType() {
+        return 'TYPE_FOOD';
     }
 }

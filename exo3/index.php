@@ -56,4 +56,5 @@ try{
 
 } catch(\Throwable $exception) {
     echo(RED_TEXT . "Certaines fonctionnalités semblent manquantes pour le bon fonctionnement de ce script" . PHP_EOL);
+    echo($exception->getMessage() . PHP_EOL);
 }
