@@ -18,6 +18,7 @@ Note: Bien que ce ne soit pas du tout proscrit habituellement, nous vous demando
 En cas de question, contactez:
 
 [Quentin Roques](mailto:quentin.roques@knplabs.com),
-[Nathan Didier](mailto:nathan.didier@knplabs.com)
+[Nathan Didier](mailto:nathan.didier@knplabs.com),
+[Pierre Bobiet](mailto:pierre.bobiet@knplabs.com)
 
 Merci et bon courage 😉
