@@ -9,7 +9,7 @@ Chacun ne devrait pas prendre plus de 2h. Le but n'est pas nécessairement d'avo
 
 - Dupliquez ce dépôt ("fork") sur Github et partagez nous le lien de celui-ci ([documentation](https://docs.github.com/fr/get-started/quickstart/fork-a-repo)) ;
 - Créez une nouvelle branche pour chaque exercice ;
-- Créez une Pull Request pour chaque exercice (de la branche vers `main`) ;
+- Créez une [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) pour chaque exercice (de la nouvelle branche vers la branche `main` de votre dépôt) ;
 
 Les enoncés des exercices sont dans les fichiers `README.md` de chaque dossier. Ils sont rédigés en anglais, nous nous attendons à ce que vous répondiez en anglais également.
 
