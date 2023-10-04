@@ -7,9 +7,9 @@ Where can I find the lowest-priced fuel? Using open data from the French Ministr
 
 ## Source
 
-Ministry of the Economy open data portal: https://data.economie.gouv.fr/explore/dataset/prix-des-carburants-en-france-flux-instantane-v2/api/
+Ministry of the Economy open data portal: <https://data.economie.gouv.fr/explore/dataset/prix-des-carburants-en-france-flux-instantane-v2/api/>
 
-Example (top 20 sales outlets in the Pays de la Loire region): https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/prix-des-carburants-en-france-flux-instantane-v2/records?where=code_region%3D52&limit=20
+Example (top 20 sales outlets in the Pays de la Loire region): <https://data.economie.gouv.fr/api/explore/v2.1/catalog/datasets/prix-des-carburants-en-france-flux-instantane-v2/records?where=code_region%3D52&limit=20>
 
 ## What is expected?
 
