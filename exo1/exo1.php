@@ -16,3 +16,19 @@ echo '<pre>';
 print_r($even);
 echo '</pre>';
 
+//!TODO 2 : Create a function that calculate the somme of all numbers from a array and return the result.
+
+//function to calculate the sum of all elements of the array
+function calculateSum($even) { 
+
+    return array_sum($even);
+}
+//calculate the sum of all elements of the array
+$sum = calculateSum($even);
+
+//code used to display the result for testing, this is not part of the exercise too
+echo 'sum of even elements:';
+echo '<pre>';
+print_r($sum);
+echo '</pre>';
+
