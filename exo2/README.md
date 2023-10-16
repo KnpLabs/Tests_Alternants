@@ -16,6 +16,9 @@ Example (top 20 sales outlets in the Pays de la Loire region): <https://data.eco
 You will provide a CLI script displaying for each region and each cheapest fuel: the price and the full address of the point of sale.
 The choice of language is free (within reason). Example: PHP, JS (Node), Python, Go, Shellscript, etc.
 
+>[!NOTE]
+> Make sure that the script searches over the **9994 stations** in the dataset, and not only the 20 stations of the example.
+
 Return example:
 
 ```shell
