@@ -1,0 +1,12 @@
+{
+  "name": "exo2",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "cheapestgaz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node cheapestgaz.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
