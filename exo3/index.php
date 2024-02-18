@@ -1,8 +1,7 @@
 <?php
 
 require_once("User.php");
-require_once("DrinkExpense.php");
-require_once("FoodExpense.php");
+require_once("Expenses.php");
 
 const RED_TEXT = "\e[0;30;31m";
 const GREEN_TEXT = "\e[0;30;32m";
@@ -37,7 +36,7 @@ try {
     foreach ($expenses as $expense) {
         echo(sprintf(
             "%s - %s %s a payé %s€ (%s€ par participant) (%s)",
-            $expense->getType() === 'TYPE_FOOD' ? "\u{1F37D} " : "\u{1F37A}",
+            $expense->getType() === 'FOOD' ? "\u{1F37D} " : "\u{1F37A}",
             $expense->getPayer()->getFirstname(),
             $expense->getPayer()->getLastname(),
             $expense->getAmount(),
