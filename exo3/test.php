@@ -47,6 +47,7 @@ try {
 
         foreach ($users as $user) {
             $balances[$user->getFullname()] += $expense->getUserShare($user);
+            echo($balances[$user->getFullname()] += $expense->getUserShare($user));
         }
     }
 

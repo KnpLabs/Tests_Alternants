@@ -1,7 +1,8 @@
 <?php
 
-class Expenses
+class DrinkExpense 
 {
+
     private float $amount;
 
     private $description;
@@ -56,27 +57,32 @@ class Expenses
         return $this->le_payeur;
     }
 
+    public function getType() {
+        return 'TYPE_DRINK';
+    }
+
     public function getUnitaryShared()
     {
-        return $this->amount / count($this->participants);
+        return round($this->getAmount() / count($this->getParticipants()),2);
     }
 
-    public function getUserShare()
+    public function getUserShare(User $user)
     {
-        return 20;
-    }
-}
+        // get the payer
+        $payer = $this->getPayer();
+        $participants = $this->getParticipants();
+        
+        $sharedAmount = $this->amount / count($this->participants);
 
-class DrinkExpense extends Expenses
-{
-    public function getType() {
-        return 'DRINK';
+        if($user === $payer){
+            return 0;
+        } else if (!in_array($user, $participants)){
+            return 0;
+        }
+        else{
+            return $sharedAmount;
+        }
+        
     }
-}
-
-class FoodExpense extends Expenses
-{
-    public function getType() {
-        return 'FOOD';
-    }
+        
 }

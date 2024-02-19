@@ -29,7 +29,7 @@ class User
         return $this->lastname;
     }
 
-    function getMailAddress()
+    function getMailAddress(): string
     {
         return $mailaddress;
     }
