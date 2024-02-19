@@ -57,32 +57,29 @@ class DrinkExpense
         return $this->le_payeur;
     }
 
-    public function getType() {
+    public function getType(): string
+    {
         return 'TYPE_DRINK';
     }
 
-    public function getUnitaryShared()
+    public function getUnitaryShared(): float
     {
         return round($this->getAmount() / count($this->getParticipants()),2);
     }
 
-    public function getUserShare(User $user)
+    public function getUserShare(User $user): float
     {
-        // get the payer
         $payer = $this->getPayer();
         $participants = $this->getParticipants();
-        
         $sharedAmount = $this->amount / count($this->participants);
 
-        if($user === $payer){
+        // Return 0 if the user is the payer or if he is not a participant
+        if($user === $payer || !in_array($user, $participants)){
             return 0;
-        } else if (!in_array($user, $participants)){
-            return 0;
-        }
+        } 
+        // If the user is not the payer and he is a participant
         else{
             return $sharedAmount;
         }
-        
     }
-        
 }

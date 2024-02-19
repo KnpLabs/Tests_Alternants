@@ -11,7 +11,7 @@ class User
     {
         $this->firstname    = $firstname;
         $this->lastname     = $lastname;
-        $this->mailaddress= $mailaddress;
+        $this->mailaddress  = $mailaddress;
     }
 
     function getId(): int
