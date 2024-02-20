@@ -44,12 +44,28 @@ async function cheapestGaz() {
     const finalDataSP98 = datasp98.results[0];
     const finalDataGazole = datagazole.results[0];
 
-    const logText = `
+    let logText = `
       ${item} :
-      SP95    : ${finalDataSP95.sp95_prix} € / ${finalDataSP95.adresse} ${finalDataSP95.cp} ${finalDataSP95.ville}
-      SP98    : ${finalDataSP98.sp98_prix} € / ${finalDataSP98.adresse} ${finalDataSP98.cp} ${finalDataSP98.ville}
-      Gazole  : ${finalDataGazole.gazole_prix} € / ${finalDataGazole.adresse} ${finalDataGazole.cp} ${finalDataGazole.ville}
-      `;
+`;
+
+    if (finalDataSP95.sp95_prix) {
+      logText += `SP95    : ${finalDataSP95.sp95_prix} € / ${finalDataSP95.adresse} ${finalDataSP95.cp} ${finalDataSP95.ville}\n`;
+    } else {
+      logText += "SP95    : Il n'y as pas de Sans Plomb 95 dans cette région\n";
+    }
+
+    if (finalDataSP98.sp98_prix) {
+      logText += `SP98    : ${finalDataSP98.sp98_prix} € / ${finalDataSP98.adresse} ${finalDataSP98.cp} ${finalDataSP98.ville}\n`;
+    } else {
+      logText +=
+        "SP98    : Il n'y as pas de Sans Plomb 98 dans cette région \n";
+    }
+
+    if (finalDataGazole.gazole_prix) {
+      logText += `Gazole  : ${finalDataGazole.gazole_prix} € / ${finalDataGazole.adresse} ${finalDataGazole.cp} ${finalDataGazole.ville}\n`;
+    } else {
+      logText += "Gazole  : Il n'y as pas de Gazole dans cette région \n";
+    }
 
     console.log(logText);
   }
