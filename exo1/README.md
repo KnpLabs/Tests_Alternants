@@ -10,3 +10,11 @@ Find the sum of all the even elements of this sequence.
 You will have to make a PR (Pull request) with executable code, written in the language of your choice, as clean as possible.
 
 []: # Path: exo1/README.md
+
+## How to use it
+
+Make sure Node.js is installed on your machine.
+Then reach the good folder : ../../exo1 .
+
+Finally run :
+`node Fibonacci.js`
