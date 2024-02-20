@@ -1,4 +1,3 @@
-
 # Where's the cheapest gaz?
 
 ## Description
@@ -16,7 +15,7 @@ Example (top 20 sales outlets in the Pays de la Loire region): <https://data.eco
 You will provide a CLI script displaying for each region and each cheapest fuel: the price and the full address of the point of sale.
 The choice of language is free (within reason). Example: PHP, JS (Node), Python, Go, Shellscript, etc.
 
->[!NOTE]
+> [!NOTE]
 > Make sure that the script searches over the **9994 stations** in the dataset, and not only the 20 stations of the example.
 
 Return example:
@@ -37,3 +36,13 @@ etc.
 You will have to make a PR (Pull request) with executable code as clean as possible.
 
 []: # Path: exo2/README.md
+
+## How to use it
+
+Make sure node.js is installed on your machine.
+
+In your terminal, naviguate to the directory of the project: "../exo2".
+
+No dependencies needed in this project.
+
+Run `npm start` to execute script and enjoy the tips to get lower price fuel !
