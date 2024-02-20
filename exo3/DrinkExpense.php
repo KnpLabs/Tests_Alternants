@@ -70,16 +70,18 @@ class DrinkExpense
     public function getUserShare(User $user): float
     {
         $payer = $this->getPayer();
+        $amount = $this->getAmount();
         $participants = $this->getParticipants();
-        $sharedAmount = $this->amount / count($this->participants);
+        $sharedAmount = round($this->amount / count($this->participants),2);
 
-        // Return 0 if the user is the payer or if he is not a participant
-        if($user === $payer || !in_array($user, $participants)){
+        if($user == $payer && in_array($user, $participants)){
+            return $amount - $sharedAmount;
+        } else if ($user !== $payer && in_array($user, $participants)){
+            return -$sharedAmount;
+        } else if ($user == $payer && !in_array($user, $participants)){
+            return $amount;
+        } else if ($user !== $payer && !in_array($user, $participants)){
             return 0;
-        } 
-        // If the user is not the payer and he is a participant
-        else{
-            return $sharedAmount;
         }
     }
 }
