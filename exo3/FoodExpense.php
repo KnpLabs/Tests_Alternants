@@ -1,7 +1,8 @@
 <?php
 
-class FoodExpense
+class FoodExpense 
 {
+
     private float $amount;
 
     private $description;
@@ -27,6 +28,15 @@ class FoodExpense
         $this->participants = $participants;
     }
 
+
+    /**
+     * @return array<string, User> $participants
+     */
+    public function getParticipants(): array
+    {
+        return $this->participants;
+    }
+
     public function getAmount(): float
     {
         return $this->amount;
@@ -47,15 +57,31 @@ class FoodExpense
         return $this->le_payeur;
     }
 
-    /**
-     * @return array<string, User> $participants
-     */
-    public function getParticipants(): array
+    public function getType(): string
     {
-        return $this->participants;
+        return 'TYPE_FOOD';
     }
 
-    function get_type() {
-        return 'FOOD';
+    public function getUnitaryShared(): float
+    {
+        return round($this->getAmount() / count($this->getParticipants()),2);
+    }
+
+    public function getUserShare(User $user): float
+    {
+        $payer = $this->getPayer();
+        $amount = $this->getAmount();
+        $participants = $this->getParticipants();
+        $sharedAmount = round($this->amount / count($this->participants),2);
+
+        if($user == $payer && in_array($user, $participants)){
+            return $amount - $sharedAmount;
+        } else if ($user !== $payer && in_array($user, $participants)){
+            return -$sharedAmount;
+        } else if ($user == $payer && !in_array($user, $participants)){
+            return $amount;
+        } else if ($user !== $payer && !in_array($user, $participants)){
+            return 0;
+        }
     }
 }
