@@ -20,3 +20,15 @@ def get_cheapest_price(region: str, fuel: str) -> tuple:
         return (price, address)
     else:
         return (None, None)
+    
+regions = get_regions()
+fuels = ["sp95", "sp98", "gazole"]
+
+for region in regions:
+    print(f"{region} :")
+    for fuel in fuels:
+        price, address = get_cheapest_price(region, fuel)
+        if price is not None:
+            print(f"  {fuel.upper()} : {price:.2f}€ / {address}")
+        else:
+            print(f"  {fuel.upper()} : No data")
