@@ -17,7 +17,7 @@ You will provide a CLI script displaying for each region and each cheapest fuel:
 The choice of language is free (within reason). Example: PHP, JS (Node), Python, Go, Shellscript, etc.
 
 >[!NOTE]
-> Make sure that the script searches over the **9994 stations** in the dataset, and not only the 20 stations of the example.
+> Make sure that the script searches over the **10 018 stations** in the dataset, and not only the 20 stations of the example.
 
 Return example:
 
@@ -37,3 +37,5 @@ etc.
 You will have to make a PR (Pull request) with executable code as clean as possible.
 
 []: # Path: exo2/README.md
+
+start : 15:05
