@@ -10,3 +10,6 @@ Find the sum of all the even elements of this sequence.
 You will have to make a PR (Pull request) with executable code, written in the language of your choice, as clean as possible.
 
 []: # Path: exo1/README.md
+start : 14:07
+end : 14:52
+without test
