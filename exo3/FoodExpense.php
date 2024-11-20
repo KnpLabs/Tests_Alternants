@@ -20,10 +20,10 @@ class FoodExpense
      */
     public function __construct(float $amount, string $description, DateTime $happenedAt, User $le_payeur, array $participants)
     {
-        $this->amount = $amount;
-        $this->description = $description;
-        $this->happenedAt = $happenedAt;
-        $this->le_payeur = $le_payeur;
+        $this->amount       = $amount;
+        $this->description  = $description;
+        $this->happenedAt   = $happenedAt;
+        $this->le_payeur    = $le_payeur;
         $this->participants = $participants;
     }
 
@@ -55,7 +55,17 @@ class FoodExpense
         return $this->participants;
     }
 
-    function get_type() {
+    function getType() {
         return 'FOOD';
+    }
+
+    function getUnitaryShared(){
+
+        return $this->amount / count($this->participants);
+    }
+
+    function getUserShare($user){
+
+        
     }
 }

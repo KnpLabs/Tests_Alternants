@@ -37,7 +37,7 @@ try {
     foreach ($expenses as $expense) {
         echo(sprintf(
             "%s - %s %s a payé %s€ (%s€ par participant) (%s)",
-            $expense->getType() === 'TYPE_FOOD' ? "\u{1F37D} " : "\u{1F37A}",
+            $expense->getType() === 'FOOD' ? "\u{1F37D}" : "\u{1F37A}",
             $expense->getPayer()->getFirstname(),
             $expense->getPayer()->getLastname(),
             $expense->getAmount(),
@@ -60,5 +60,5 @@ try {
 
 } catch (\Throwable $exception) {
     echo(RED_TEXT . "Certaines fonctionnalités semblent manquantes pour le bon fonctionnement de ce script" . PHP_EOL);
-    echo(RED_TEXT . "Message d'erreur : " . $exception->getMessage() . PHP_EOL);
+    echo(RED_TEXT . "Message d'erreur : " . $exception->getMessage() . " ligne : " . $exception->getLine() . " fichier : " . $exception->getFile() . PHP_EOL);
 }

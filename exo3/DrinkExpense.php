@@ -56,7 +56,17 @@ class DrinkExpense
         return $this->le_payeur;
     }
 
-    function get_type() {
+    function getType() {
         return 'DRINK';
+    }
+
+    function getUnitaryShared(){
+    return $this->amount / count($this->participants);
+
+    }
+
+    function getUserShare($user){
+
+
     }
 }
