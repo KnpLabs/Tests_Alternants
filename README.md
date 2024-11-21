@@ -20,7 +20,6 @@ En cas de question, contactez:
 [Manon Villard](mailto:manon.villard@knplabs.com),
 [Nathan Didier](mailto:nathan.didier@knplabs.com),
 [Pierre Bobiet](mailto:pierre.bobiet@knplabs.com),
-[Erwann Leroux](mailto:erwann.leroux@knplabs.com),
 [Brice Correia](mailto:brice.correia@knplabs.com)
 
 Merci et bon courage 😉
