@@ -6,12 +6,14 @@ class User
     private string $firstName;
     private string $lastName;
     private string $mailAddress;
+    private float $balance;
 
-    public function __construct(string $firstName, string $lastName, string $mailAddress)
+    public function __construct(string $firstName, string $lastName, string $mailAddress, float $balance)
     {
         $this->firstName    = $firstName;
         $this->lastName     = $lastName;
         $this->mailAddress  = $mailAddress;
+        $this->balance      = $balance;
     }
 
     function getId(): int
@@ -24,7 +26,8 @@ class User
         return $this->firstName;
     }
 
-    function getLastName(){
+    function getLastName()
+    {
         return $this->lastName;
     }
 
@@ -33,9 +36,26 @@ class User
         return $this->mailAddress;
     }
 
-    function getFullName(){
-
+    function getFullName()
+    {
         return $this->firstName . " " . $this->lastName;
+    }
 
+    /**
+     * Get the value of balance
+     */ 
+    public function getBalance()
+    {
+            return $this->balance;
+    }
+
+    /**
+     * Set the value of balance
+     *
+     * @return  self
+     */ 
+    public function setBalance($balance)
+    {
+        return $this->balance = $balance;
     }
 }

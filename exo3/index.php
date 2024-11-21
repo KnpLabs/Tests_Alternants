@@ -13,9 +13,9 @@ try {
     $balances = [];
     /** @var User[] $users */
     $users = [];
-    $users[] = $robert = new User('Robert', 'Robichet', 'robert.robichet@domain.com');
-    $users[] = $marcel = new User('Marcel', 'Patulacci', 'marcel.patulacci@domain.com');
-    $users[] = $jeanPierre = new User('Jean-Pierre', 'Avidol', 'jean-pierre.avidol@domain.com');
+    $users[] = $robert = new User('Robert', 'Robichet', 'robert.robichet@domain.com', 0);
+    $users[] = $marcel = new User('Marcel', 'Patulacci', 'marcel.patulacci@domain.com', 0);
+    $users[] = $jeanPierre = new User('Jean-Pierre', 'Avidol', 'jean-pierre.avidol@domain.com', 0);
 
     //Expenses creation
     /** @var Expense[] $expenses */
@@ -31,15 +31,15 @@ try {
     echo(GREEN_TEXT . "==================" . PHP_EOL);
 
     foreach ($users as $user) {
-        $balances[$user->getFullname()] = 0;
+        $balances[$user->getFullname()] = $user->getBalance();
     }
 
     foreach ($expenses as $expense) {
         echo(sprintf(
             "%s - %s %s a payé %s€ (%s€ par participant) (%s)",
             $expense->getType() === 'FOOD' ? "\u{1F37D}" : "\u{1F37A}",
-            $expense->getPayer()->getFirstname(),
-            $expense->getPayer()->getLastname(),
+            $expense->getLePayeur()->getFirstname(),
+            $expense->getLePayeur()->getLastname(),
             $expense->getAmount(),
             $expense->getUnitaryShared(),
             $expense->getDescription()

@@ -13,5 +13,5 @@ As is, the code cannot even work. When we launch the index.php file with a PHP i
 ## What is expected
 
 You will have to make a PR (Pull request) modifying different files (possibility to add and/or delete) which makes the application functional (no error and operational calculation) and greatly improving the existing codebase.
-start 16h10 -> 17h10
+start 16h10 -> 17h10 / 9h30 -> 11:00
 

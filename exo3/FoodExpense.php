@@ -8,7 +8,7 @@ class FoodExpense
 
     private \DateTime $happenedAt;
 
-    private User $le_payeur;
+    private User $lePayeur;
 
     /**
      * @var array<User>
@@ -18,12 +18,12 @@ class FoodExpense
     /**
      * @param array <string, User> $participants
      */
-    public function __construct(float $amount, string $description, DateTime $happenedAt, User $le_payeur, array $participants)
+    public function __construct(float $amount, string $description, DateTime $happenedAt, User $lePayeur, array $participants)
     {
         $this->amount       = $amount;
         $this->description  = $description;
         $this->happenedAt   = $happenedAt;
-        $this->le_payeur    = $le_payeur;
+        $this->lePayeur    = $lePayeur;
         $this->participants = $participants;
     }
 
@@ -42,9 +42,9 @@ class FoodExpense
         return $this->happenedAt;
     }
 
-    public function getPayer(): User
+    public function getLePayeur(): User
     {
-        return $this->le_payeur;
+        return $this->lePayeur;
     }
 
     /**
@@ -66,6 +66,11 @@ class FoodExpense
 
     function getUserShare($user){
 
-        
+        return $this->amount;
+    }
+
+    function setUserShare($user){
+
+        return $user->setBalance = $this->amount;
     }
 }
