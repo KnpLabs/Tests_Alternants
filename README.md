@@ -7,15 +7,17 @@ Chacun ne devrait pas prendre plus de 2h. Le but n'est pas nécessairement d'avo
 
 ## Consignes
 
-- Dupliquez ce dépôt ("fork") sur Github et partagez nous le lien de celui-ci ([documentation](https://docs.github.com/fr/get-started/quickstart/fork-a-repo)) ;
+- Cliquez sur le lien "Démarrer les tests", remplissez le formulaire et partagez nous le lien du dépôt que vous venez de créer ;
 - Créez une nouvelle branche pour chaque exercice ;
 - Créez une [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) pour chaque exercice (de la nouvelle branche vers la branche `main` de votre dépôt) ;
 
+[:arrow_forward: Démarrer les tests](https://github.com/new?template_owner=knplabs&template_name=Tests_Alternants&owner=%40me&name=tests-techniques-knplabs&description=Mes+tests+techniques&visibility=public)
+
 Les enoncés des exercices sont dans les fichiers `README.md` de chaque dossier. Ils sont rédigés en anglais, nous nous attendons à ce que vous répondiez en anglais également.
 
-Note: Bien que ce ne soit pas du tout proscrit habituellement, nous vous demandons de jouer franc-jeu et de ne pas vous faire aider par un agent conversationnel (type ChatGPT ou equivalent), par un ami, par un collègue ou même par votre grand-mère. Le but de ces exercices est de voir votre cheminement et d'en discuter ensuite avec vous.
+Note: Bien que ce ne soit pas du tout proscrit habituellement, nous vous demandons de jouer franc-jeu et de ne pas vous faire aider par un agent conversationnel (type ChatGPT, Copilot ou equivalent), par un ami, par un collègue ou même par votre grand-mère. Le but de ces exercices est de voir votre cheminement et d'en discuter ensuite avec vous.
 
-En cas de question, contactez:
+En cas de question, contactez au choix:
 
 [Manon Villard](mailto:manon.villard@knplabs.com),
 [Nathan Didier](mailto:nathan.didier@knplabs.com),
