@@ -22,6 +22,5 @@ En cas de question, contactez au choix:
 [Manon Villard](mailto:manon.villard@knplabs.com),
 [Nathan Didier](mailto:nathan.didier@knplabs.com),
 [Pierre Bobiet](mailto:pierre.bobiet@knplabs.com),
-[Brice Correia](mailto:brice.correia@knplabs.com)
 
-Merci et bon courage 😉
+Merci et bon courage
